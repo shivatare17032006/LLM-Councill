@@ -96,3 +96,41 @@ body {
   border-left: 4px solid #ddd;
   color: #666;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .markdown-content {
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+  .markdown-content h1 {
+    font-size: 20px;
+  }
+  
+  .markdown-content h2 {
+    font-size: 18px;
+  }
+  
+  .markdown-content h3 {
+    font-size: 16px;
+  }
+  
+  .markdown-content pre {
+    font-size: 12px;
+    padding: 8px;
+  }
+  
+  .markdown-content code {
+    font-size: 12px;
+  }
+  
+  .markdown-content ul,
+  .markdown-content ol {
+    padding-left: 20px;
+  }
+}

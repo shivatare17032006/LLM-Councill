@@ -120,26 +120,28 @@ export default function ChatInterface({
         <div ref={messagesEndRef} />
       </div>
 
-      {conversation.messages.length === 0 && (
+      <div className="input-container">
         <form className="input-form" onSubmit={handleSubmit}>
           <textarea
             className="message-input"
-            placeholder="Ask your question... (Shift+Enter for new line, Enter to send)"
+            placeholder="Send a message..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
             disabled={isLoading}
-            rows={3}
+            rows={1}
           />
           <button
             type="submit"
             className="send-button"
             disabled={!input.trim() || isLoading}
           >
-            Send
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M7 11L12 6L17 11M12 18V7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </button>
         </form>
-      )}
+      </div>
     </div>
   );
 }

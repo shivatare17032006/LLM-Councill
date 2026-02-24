@@ -23,3 +23,18 @@
   line-height: 1.7;
   font-size: 15px;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .final-response {
+    padding: 12px;
+  }
+  
+  .chairman-label {
+    font-size: 11px;
+  }
+  
+  .final-text {
+    font-size: 14px;
+  }
+}

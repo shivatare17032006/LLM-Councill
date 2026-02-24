@@ -9,6 +9,7 @@ function App() {
   const [currentConversationId, setCurrentConversationId] = useState(null);
   const [currentConversation, setCurrentConversation] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [sidebarVisible, setSidebarVisible] = useState(window.innerWidth > 768);
 
   // Load conversations on mount
   useEffect(() => {
@@ -183,11 +184,23 @@ function App() {
 
   return (
     <div className="app">
+      <button 
+        className="sidebar-toggle" 
+        onClick={() => setSidebarVisible(!sidebarVisible)}
+        title={sidebarVisible ? 'Hide sidebar' : 'Show sidebar'}
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <line x1="3" y1="6" x2="21" y2="6" strokeWidth="2" strokeLinecap="round"/>
+          <line x1="3" y1="12" x2="21" y2="12" strokeWidth="2" strokeLinecap="round"/>
+          <line x1="3" y1="18" x2="21" y2="18" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
+      </button>
       <Sidebar
         conversations={conversations}
         currentConversationId={currentConversationId}
         onSelectConversation={handleSelectConversation}
         onNewConversation={handleNewConversation}
+        isVisible={sidebarVisible}
       />
       <ChatInterface
         conversation={currentConversation}

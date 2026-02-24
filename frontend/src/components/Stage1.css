@@ -63,3 +63,38 @@
   color: #333;
   line-height: 1.6;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .stage {
+    padding: 12px;
+    margin: 12px 0;
+  }
+  
+  .stage-title {
+    font-size: 14px;
+  }
+  
+  .tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 4px;
+  }
+  
+  .tab {
+    font-size: 13px;
+    padding: 6px 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  .tab-content {
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .model-name {
+    font-size: 11px;
+  }
+}

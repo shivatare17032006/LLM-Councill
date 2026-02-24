@@ -2,7 +2,10 @@
  * API client for the LLM Council backend.
  */
 
-const API_BASE = 'http://localhost:8001';
+// Use the actual host IP so it works on mobile too
+const API_BASE = window.location.hostname === 'localhost' 
+  ? 'http://localhost:8001'
+  : `http://${window.location.hostname}:8001`;
 
 export const api = {
   /**

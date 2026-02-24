@@ -13,3 +13,53 @@
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
+
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 276px;
+  z-index: 1001;
+  padding: 8px;
+  background: #4a90e2;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: left 0.3s ease, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.app:has(.sidebar.hidden) .sidebar-toggle {
+  left: 16px;
+}
+
+.sidebar-toggle:hover {
+  background: #357abd;
+}
+
+.sidebar-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    z-index: 999;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .sidebar-toggle {
+    left: 16px;
+  }
+  
+  .app:has(.sidebar:not(.hidden)) .sidebar-toggle {
+    left: 276px;
+  }
+}

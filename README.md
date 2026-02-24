@@ -1,5 +1,7 @@
 # LLM Council
 
+**Customized by:** Aryan Shivatare
+
 ![llmcouncil](header.jpg)
 
 The idea of this repo is that instead of asking a question to your favorite LLM provider (e.g. OpenAI GPT 5.1, Google Gemini 3.0 Pro, Anthropic Claude Sonnet 4.5, xAI Grok 4, eg.c), you can group them into your "LLM Council". This repo is a simple, local web app that essentially looks like ChatGPT except it uses OpenRouter to send your query to multiple LLMs, it then asks them to review and rank each other's work, and finally a Chairman LLM produces the final response.
@@ -85,3 +87,25 @@ Then open http://localhost:5173 in your browser.
 - **Frontend:** React + Vite, react-markdown for rendering
 - **Storage:** JSON files in `data/conversations/`
 - **Package Management:** uv for Python, npm for JavaScript
+
+## Customizations
+
+This version includes custom enhancements by **Aryan Shivatare**:
+
+- ✨ **Responsive Mobile UI**: Fully optimized for mobile devices with flexible layouts
+- 🎨 **Collapsible Sidebar**: ChatGPT-style hamburger menu to toggle sidebar visibility
+- 💬 **Continuous Conversations**: Send multiple messages within the same conversation
+- 📱 **Mobile Network Access**: Configured for access via mobile hotspot
+- 💰 **Budget-Friendly Models**: Pre-configured with working free/cheap models (GPT-3.5-turbo, Claude-3-haiku)
+- 🚀 **One-Click Start**: PowerShell script (`start.ps1`) to launch both servers simultaneously
+
+### Mobile Access
+
+The app is configured to run on your local network. After starting with `start.ps1`, access from:
+- **Desktop**: http://localhost:5174
+- **Mobile**: http://YOUR_IP:5174 (your computer's IP address on the network)
+
+---
+
+**Original Project by:** Andrej Karpathy  
+**Customized by:** Aryan Shivatare

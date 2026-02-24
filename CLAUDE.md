@@ -1,5 +1,8 @@
 # CLAUDE.md - Technical Notes for LLM Council
 
+**Project Customized by:** Aryan Shivatare  
+**Original Project by:** Andrej Karpathy
+
 This file contains technical details, architectural decisions, and important implementation notes for future development sessions.
 
 ## Project Overview
